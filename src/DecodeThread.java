@@ -45,7 +45,7 @@ class DecodeThread implements Runnable {
                     // if image capture was successful, start processing
                     if (raw != null) {
                         Image image = Image.createImage(raw, 0, raw.length);
-                        //Image image = Image.createImage("/qr.png");
+                       // Image image = Image.createImage("/qr.png");
                         // initialize decoder and decode image matrix
                         QRCodeDecoder decoder = new QRCodeDecoder();
                         try {

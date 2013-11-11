@@ -66,6 +66,7 @@ public class QRMidlet extends MIDlet implements CommandListener {
     private DecodeThread decoder = null;
     
     //sharing stuff
+    private boolean	sharingEnabled = false;
     private Registry registry = null;
     private String result = null;
     
@@ -81,8 +82,10 @@ public class QRMidlet extends MIDlet implements CommandListener {
 		display = Display.getDisplay(this);
 		// load settings
 		loadSettings();
-                
-                // initialize commands
+		String platform = System.getProperty("microedition.platform");
+		if(platform.indexOf("Nokia_Asha_1_1") > 0)
+			sharingEnabled = true;
+        // initialize commands
 		exitCommand = new Command("Exit", Command.EXIT, 1);
 		cameraCommand = new Command("Camera", Command.SCREEN, 2);
 		cancelCommand = new Command("Cancel", Command.CANCEL, 2);
@@ -285,7 +288,8 @@ public class QRMidlet extends MIDlet implements CommandListener {
 		}
 		resultForm.addCommand(new Command("Back", Command.BACK, 0));
 		resultForm.addCommand(cameraCommand);
-		resultForm.addCommand(shareCommand);
+		if(sharingEnabled)
+			resultForm.addCommand(shareCommand);
 		resultForm.append(resultStringItem);
 		resultForm.setCommandListener(this);
 		// display result form.
