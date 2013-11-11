@@ -397,7 +397,7 @@ public class QRMidlet extends MIDlet implements CommandListener {
                 "by: Antti Pohjola, summeli@summeli.fi \nhttp://www.summeli.fi\n"+
                 "QrScan is licenced under GPLv2 licence \n" +
                 "You can get the source code from: http://github.com/Summeli/QrScan-Asha \n" +
-                "the icons is derived from the work of  P.J. Onori https://github.com/somerandomdude \n");
+                "the icons is derived from the work of P.J. Onori https://github.com/somerandomdude \n");
 	}
 	
 	private void showMessage(String title, String message) {
