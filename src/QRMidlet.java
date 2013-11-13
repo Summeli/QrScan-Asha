@@ -39,7 +39,6 @@ public class QRMidlet extends MIDlet implements CommandListener {
     private Form settingsForm;
     private Form messageForm;
 	private Command exitCommand;
-	private Command cameraCommand;
 	private Command cancelCommand;
 	private Command callCommand;
 	private Command openCommand;
@@ -87,7 +86,7 @@ public class QRMidlet extends MIDlet implements CommandListener {
 			sharingEnabled = true;
         // initialize commands
 		exitCommand = new Command("Exit", Command.EXIT, 1);
-		cameraCommand = new Command("Camera", Command.SCREEN, 2);
+		//cameraCommand = new Command("Camera", Command.SCREEN, 2);
 		cancelCommand = new Command("Cancel", Command.CANCEL, 2);
 		callCommand = new Command("Call", Command.ITEM, 1);
 		openCommand = new Command("Open Link", Command.ITEM, 1);
@@ -190,8 +189,6 @@ public class QRMidlet extends MIDlet implements CommandListener {
 				showCamera();
 			}else if( c == shareCommand){
 				startShare();
-			}else if (c == cameraCommand) {
-				showCamera();
 			}else if (c == callCommand) {
 				dispatchPlatformRequest();
 			} else if (c == openCommand) {
@@ -287,7 +284,6 @@ public class QRMidlet extends MIDlet implements CommandListener {
 			resultForm.addCommand(smsCommand);
 		}
 		resultForm.addCommand(new Command("Back", Command.BACK, 0));
-		resultForm.addCommand(cameraCommand);
 		if(sharingEnabled)
 			resultForm.addCommand(shareCommand);
 		resultForm.append(resultStringItem);
