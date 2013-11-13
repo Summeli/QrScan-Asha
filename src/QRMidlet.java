@@ -30,7 +30,7 @@ import javax.microedition.rms.*;
 public class QRMidlet extends MIDlet implements CommandListener {
     // Midlet name
 	private String midletName = "QrScan";
-	private String version = "1.0.0";
+	private String version = "1.0.1";
 	
 	// UI Elements
 	private Display display;
