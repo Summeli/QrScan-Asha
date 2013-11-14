@@ -118,7 +118,7 @@ public class QRMidlet extends MIDlet implements CommandListener {
             canvas = new CameraCanvas(this);
             // initialize video control
             videoControl.initDisplayMode(VideoControl.USE_DIRECT_VIDEO, canvas);
-            focusControl = (FocusControl)player.getControl("javax.microedition.amms.control.camera.FocusContro");
+            focusControl = (FocusControl)player.getControl("javax.microedition.amms.control.camera.FocusControl");
             if(focusControl != null)
             	focusControl.setMacro(true);
             flashControl = 	(FlashControl) player.getControl("javax.microedition.amms.control.camera.FlashControl");

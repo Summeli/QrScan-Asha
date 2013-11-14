@@ -1,5 +1,5 @@
 MIDlet-1: QrScan,/icon_asha.png,QRMidlet
-MIDlet-Jar-Size: 80347
+MIDlet-Jar-Size: 80999
 MIDlet-Jar-URL: QrScan.jar
 MIDlet-Name: QrScan
 MIDlet-Vendor: Antti Pohjola
